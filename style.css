@@ -1,0 +1,605 @@
+/* ==========================================================================
+   1. CẤU HÌNH BIẾN MÀU SẮC & RESET (Premium Pastel Style)
+   ========================================================================== */
+:root {
+  --primary: #ff9f1c; /* Cam Mặt Trời ấm áp */
+  --primary-hover: #f18a00;
+  --secondary: #2ec4b6; /* Xanh ngọc năng động */
+  --secondary-hover: #23a69a;
+  --text-main: #2b2d42; /* Màu chữ tối dịu mắt */
+  --text-muted: #6c757d; /* Màu chữ phụ */
+  --bg-creamy: #fffcf7; /* Nền kem ấm áp */
+  --bg-soft-orange: #fff3e3; /* Nền cam nhạt ngăn cách section */
+  --white: #ffffff;
+  --radius-lg: 30px; /* Bo góc tròn trịa an toàn kiểu trẻ thơ */
+  --radius-md: 20px;
+  --shadow-sm: 0 8px 24px rgba(255, 159, 28, 0.05);
+  --shadow-md: 0 12px 32px rgba(43, 45, 66, 0.06);
+  --shadow-lg: 0 20px 40px rgba(43, 45, 66, 0.1);
+  --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Baloo 2", cursive;
+  background-color: var(--bg-creamy);
+  color: var(--text-main);
+  line-height: 1.6;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   2. HERO BANNER & THANH MENU (HEADER)
+   ========================================================================== */
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 95vh;
+  /* Phủ một lớp màu gradient nhẹ lên ảnh nền để chữ luôn sắc nét */
+  background: linear-gradient(
+      135deg,
+      rgba(255, 159, 28, 0.88),
+      rgba(251, 133, 0, 0.92)
+    ),
+    url("https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=1600&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 800;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 6px;
+  border-radius: 999px;
+  backdrop-filter: blur(10px);
+}
+
+.nav-links a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 16px;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  background: var(--white);
+  color: var(--primary);
+}
+
+.menu-toggle {
+  display: none;
+  border: none;
+  background: var(--white);
+  color: var(--primary);
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.hero-content {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+  padding: 60px 20px 120px;
+  position: relative;
+  z-index: 2;
+}
+
+.sun-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 8px 20px;
+  border-radius: 999px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero h1 {
+  font-size: clamp(40px, 7vw, 72px);
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 25px;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hero p {
+  font-size: 22px;
+  max-width: 680px;
+  margin: 0 auto 40px;
+  opacity: 0.95;
+}
+
+/* Nút bấm tổng thể */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 32px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  transition: var(--transition);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary {
+  background: var(--secondary);
+  color: var(--white);
+}
+.btn-primary:hover {
+  background: var(--secondary-hover);
+}
+.btn-light {
+  background: var(--white);
+  color: var(--primary);
+}
+.btn-outline {
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
+  background: var(--white);
+}
+.btn-outline:hover {
+  background: var(--secondary);
+  color: var(--white);
+}
+
+/* Khớp nối dạng sóng lượn ở đáy banner */
+.wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: var(--bg-creamy);
+  clip-path: ellipse(65% 100% at 50% 100%);
+}
+
+/* ==========================================================================
+   3. TIÊU ĐỀ SECTION & THIẾT KẾ CARD CHUNG
+   ========================================================================== */
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 90px 20px;
+}
+
+.section-soft {
+  background-color: var(--bg-soft-orange);
+  max-width: none;
+}
+
+.section-soft > * {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.section-title span {
+  font-size: 44px;
+  display: inline-block;
+  margin-bottom: 10px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.section-title h2 {
+  font-size: 40px;
+  color: var(--text-main);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.section-title p {
+  font-size: 19px;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.card,
+.activity-card,
+.admission-card,
+.map-box,
+.image-box {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   4. THIẾT KẾ CÁC KHỐI CHỨC NĂNG (Gồm Ảnh Thực Tế)
+   ========================================================================== */
+/* Khối giới thiệu lồng ảnh */
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.highlight-card {
+  border: 3px dashed var(--primary);
+  padding: 45px;
+}
+
+.highlight-card h3 {
+  color: var(--primary);
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: 700;
+  transition: var(--transition);
+}
+.text-link:hover {
+  transform: translateX(5px);
+  color: var(--secondary-hover);
+}
+
+.feature-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.mini-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 20px 15px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0, 0, 0, 0.02);
+}
+.mini-card:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-md);
+}
+
+/* Khung hiển thị ảnh góc bo nghệ thuật */
+.image-box {
+  position: relative;
+  height: 100%;
+  min-height: 380px;
+}
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Hoạt động Grid */
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.activity-card {
+  padding: 40px 25px;
+  text-align: center;
+}
+.activity-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+.activity-card span {
+  font-size: 56px;
+  display: block;
+  margin-bottom: 15px;
+  transition: var(--transition);
+}
+.activity-card:hover span {
+  transform: scale(1.15) rotate(5deg);
+}
+
+.activity-card h3 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.activity-card p {
+  color: var(--text-muted);
+  font-size: 16px;
+}
+
+/* Tuyển sinh Card */
+.admission-card {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+  background: linear-gradient(135deg, var(--white), #fffbf2);
+  border: 2px solid #ffe8ba;
+}
+
+.admission-card h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.tag {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--white);
+  padding: 6px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.admission-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.admission-actions .btn {
+  width: 100%;
+}
+
+/* Liên hệ & Bản đồ */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.contact-card {
+  padding: 45px;
+}
+.contact-card h3 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+.contact-card p {
+  margin-bottom: 18px;
+}
+.btn.full {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.map-box iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  border: none;
+}
+
+/* ==========================================================================
+   5. FLOATING BUTTON & FOOTER & ANIMATION
+   ========================================================================== */
+.floating-zalo {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #0084ff; /* Xanh đặc trưng Zalo/Messenger */
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 28px;
+  box-shadow: 0 8px 30px rgba(0, 132, 255, 0.4);
+  z-index: 999;
+  animation: pulse 2s infinite;
+  transition: var(--transition);
+}
+.floating-zalo:hover {
+  transform: scale(1.1);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 132, 255, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(0, 132, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 132, 255, 0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+footer {
+  background: var(--text-main);
+  color: rgba(255, 255, 255, 0.65);
+  text-align: center;
+  padding: 35px 20px;
+  font-weight: 600;
+}
+
+/* Các lớp bổ trợ hiệu ứng mượt khi cuộn trang */
+.hidden {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   6. RESPONSIVE DESIGN (Tối ưu giao diện Mobile/Máy tính bảng)
+   ========================================================================== */
+@media (max-width: 992px) {
+  .activity-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .intro-grid,
+  .contact-grid,
+  .admission-card {
+    grid-template-columns: 1fr;
+  }
+  .image-box {
+    min-height: 300px;
+    order: -1;
+  } /* Đẩy ảnh lên trước chữ trên điện thoại */
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    top: 85px;
+    left: 20px;
+    right: 20px;
+    background: var(--white);
+    flex-direction: column;
+    display: none;
+    padding: 20px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(255, 159, 28, 0.1);
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .nav-links a {
+    color: var(--text-main);
+    width: 100%;
+    text-align: center;
+  }
+  .nav-links a:hover {
+    background: var(--bg-soft-orange);
+  }
+
+  .activity-grid,
+  .feature-list {
+    grid-template-columns: 1fr;
+  }
+  .section-title h2 {
+    font-size: 32px;
+  }
+  .admission-card {
+    padding: 35px 20px;
+    text-align: center;
+  }
+}
+
+/* 1. Logo và các đường dẫn trên thanh menu navigation */
+.logo,
+.nav-links a {
+  cursor: pointer;
+}
+
+/* 2. Toàn bộ các nút bấm (Xem tuyển sinh, Nhắn Zalo, Gọi điện...) */
+.btn {
+  cursor: pointer; /* Thêm dòng này để chắc chắn nút bấm luôn biến thành bàn tay */
+}
+
+/* 3. Đường dẫn "Liên hệ tư vấn →" trong khối Giới thiệu */
+.text-link {
+  cursor: pointer;
+}
+
+/* 4. Các thẻ nhỏ (Chăm sóc tận tình, Không gian an toàn...) và thẻ hoạt động nổi bật */
+.mini-card,
+.activity-card {
+  cursor: pointer;
+}
+
+/* 5. Nút bấm thu phóng menu trên phiên bản di động */
+.menu-toggle {
+  cursor: pointer;
+}

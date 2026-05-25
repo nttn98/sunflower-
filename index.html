@@ -1,123 +1,237 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nhóm trẻ Hoa Mặt Trời</title>
-<style>
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#fff8f0;
-    color:#333;
-}
-header{
-    background:#ffb703;
-    color:white;
-    text-align:center;
-    padding:40px 20px;
-}
-header h1{
-    margin:0;
-    font-size:40px;
-}
-nav{
-    background:#fb8500;
-    padding:12px;
-    text-align:center;
-}
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 15px;
-    font-weight:bold;
-}
-section{
-    padding:40px 20px;
-    max-width:1000px;
-    margin:auto;
-}
-.card{
-    background:white;
-    padding:20px;
-    border-radius:15px;
-    margin-bottom:20px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
-}
-footer{
-    background:#023047;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-.btn{
-    display:inline-block;
-    background:#ffb703;
-    color:white;
-    padding:12px 20px;
-    border-radius:10px;
-    text-decoration:none;
-    margin-top:10px;
-}
-</style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nhóm trẻ Hoa Mặt Trời</title>
 
-<header>
-    <h1>Nhóm trẻ Hoa Mặt Trời</h1>
-    <p>Môi trường học tập vui vẻ – an toàn – yêu thương</p>
-</header>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-<nav>
-    <a href="#gioithieu">Giới thiệu</a>
-    <a href="#hoatdong">Hoạt động</a>
-    <a href="#tuyensinh">Tuyển sinh</a>
-    <a href="#lienhe">Liên hệ</a>
-</nav>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
 
-<section id="gioithieu">
-    <div class="card">
-        <h2>🌻 Giới thiệu</h2>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="hero" id="home">
+      <nav class="navbar">
+        <div class="logo">🌻 Hoa Mặt Trời</div>
+
+        <button class="menu-toggle" aria-label="Mở menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="nav-links">
+          <a href="#gioithieu">Giới thiệu</a>
+          <a href="#hoatdong">Hoạt động</a>
+          <a href="#tuyensinh">Tuyển sinh</a>
+          <a href="#lienhe">Liên hệ</a>
+        </div>
+      </nav>
+
+      <div class="hero-content">
+        <div class="sun-badge">☀️ Mầm non yêu thương</div>
+
+        <h1>Nhóm trẻ Hoa Mặt Trời</h1>
+
         <p>
-            Nhóm trẻ Hoa Mặt Trời mang đến môi trường học tập thân thiện,
-            giúp các bé phát triển toàn diện thông qua học tập và vui chơi.
+          Môi trường học tập vui vẻ – an toàn – yêu thương cho bé phát triển
+          toàn diện mỗi ngày.
         </p>
-    </div>
-</section>
 
-<section id="hoatdong">
-    <div class="card">
-        <h2>🎨 Hoạt động nổi bật</h2>
-        <ul>
-            <li>Học STEM sáng tạo</li>
-            <li>Tiền tiểu học</li>
-            <li>Aerobic – vận động</li>
-            <li>Tạo hình và âm nhạc</li>
-            <li>Kỹ năng sống cho bé</li>
-        </ul>
-    </div>
-</section>
+        <div class="hero-buttons">
+          <a
+            class="btn btn-primary"
+            href="https://zalo.me/84363579701"
+            target="_blank"
+          >
+            <i class="fa-brands fa-facebook-messenger"></i>
+            Nhắn Zalo ngay
+          </a>
 
-<section id="tuyensinh">
-    <div class="card">
-        <h2>📚 Tuyển sinh</h2>
-        <p>Nhận trẻ từ 12 tháng đến 5 tuổi.</p>
-        <p>Môi trường sạch sẽ – chăm sóc tận tình.</p>
-        <a class="btn" href="tel:0363579701">Gọi ngay: 0363579701</a>
-    </div>
-</section>
+          <a class="btn btn-light" href="#tuyensinh">
+            <i class="fa-solid fa-book-open"></i>
+            Xem tuyển sinh
+          </a>
+        </div>
+      </div>
 
-<section id="lienhe">
-    <div class="card">
-        <h2>📍 Liên hệ</h2>
-        <p><strong>Địa chỉ:</strong> Tổ 6, Khu phố Uyên Hưng 5, Phường Tân Uyên, TP. Hồ Chí Minh</p>
-        <p><strong>Điện thoại:</strong> 0363579701 (Cô Trinh)</p>
-    </div>
-</section>
+      <div class="wave"></div>
+    </header>
 
-<footer>
-    © 2026 Nhóm trẻ Hoa Mặt Trời
-</footer>
+    <main>
+      <section id="gioithieu" class="section">
+        <div class="section-title">
+          <span>🌻</span>
+          <h2>Giới thiệu</h2>
+          <p>Nơi bé được chăm sóc, học hỏi và lớn lên trong tình yêu thương.</p>
+        </div>
 
-</body>
+        <div class="intro-grid">
+          <div class="card highlight-card">
+            <h3>Nhóm trẻ Hoa Mặt Trời</h3>
+            <p>
+              Chúng tôi mang đến môi trường thân thiện, sạch sẽ và an toàn, giúp
+              các bé phát triển toàn diện thông qua học tập, vui chơi, vận động
+              và rèn luyện kỹ năng sống tốt nhất.
+            </p>
+            <a class="text-link" href="#lienhe"> Liên hệ tư vấn → </a>
+          </div>
+
+          <div class="image-box">
+            <img
+              src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=1600&auto=format&fit=crop"
+              alt="Bé mầm non vui chơi"
+            />
+          </div>
+        </div>
+
+        <div class="feature-list" style="margin-top: 30px">
+          <div class="mini-card">💛 Chăm sóc tận tình</div>
+          <div class="mini-card">🧸 Không gian an toàn</div>
+          <div class="mini-card">🎵 Học mà chơi</div>
+          <div class="mini-card">🌱 Phát triển toàn diện</div>
+        </div>
+      </section>
+
+      <section id="hoatdong" class="section section-soft">
+        <div class="section-title">
+          <span>🎨</span>
+          <h2>Hoạt động nổi bật</h2>
+          <p>Các hoạt động phong phú giúp bé tự tin, sáng tạo và khỏe mạnh.</p>
+        </div>
+
+        <div class="activity-grid">
+          <div class="activity-card">
+            <span>🔬</span>
+            <h3>STEM sáng tạo</h3>
+            <p>Khơi gợi tư duy khám phá và giải quyết vấn đề.</p>
+          </div>
+
+          <div class="activity-card">
+            <span>📚</span>
+            <h3>Tiền tiểu học</h3>
+            <p>Làm quen chữ cái, con số và nề nếp học tập.</p>
+          </div>
+
+          <div class="activity-card">
+            <span>🤸</span>
+            <h3>Aerobic</h3>
+            <p>Vận động vui nhộn giúp bé khỏe khoắn mỗi ngày.</p>
+          </div>
+
+          <div class="activity-card">
+            <span>🎶</span>
+            <h3>Âm nhạc</h3>
+            <p>Nuôi dưỡng cảm xúc và sự tự tin cho bé.</p>
+          </div>
+
+          <div class="activity-card">
+            <span>🖍️</span>
+            <h3>Tạo hình</h3>
+            <p>Phát triển óc sáng tạo và khả năng thẩm mỹ.</p>
+          </div>
+
+          <div class="activity-card">
+            <span>🤝</span>
+            <h3>Kỹ năng sống</h3>
+            <p>Giúp bé biết tự lập và yêu thương bạn bè.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="tuyensinh" class="section">
+        <div class="admission-card">
+          <div>
+            <span class="tag">📚 Tuyển sinh</span>
+            <h2>Nhận trẻ từ 12 tháng đến 5 tuổi</h2>
+            <p>
+              Môi trường sạch sẽ, cô giáo tận tâm, chương trình học nhẹ nhàng và
+              phù hợp từng độ tuổi của trẻ nhỏ.
+            </p>
+          </div>
+
+          <div class="admission-actions">
+            <a
+              class="btn btn-primary"
+              href="https://zalo.me/84363579701"
+              target="_blank"
+            >
+              <i class="fa-brands fa-rocketchat"></i>
+              Chat Zalo
+            </a>
+
+            <a class="btn btn-outline" href="#">
+              <i class="fa-solid fa-phone"></i>
+              0363579701
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="lienhe" class="section section-soft">
+        <div class="section-title">
+          <span>📍</span>
+          <h2>Liên hệ</h2>
+          <p>
+            Phụ huynh có thể nhắn Zalo hoặc ghé thăm nhóm trẻ theo địa chỉ bên
+            dưới.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="card contact-card">
+            <h3>Thông tin liên hệ</h3>
+
+            <p>
+              <strong>Địa chỉ:</strong><br />
+              Tổ 6, Khu phố Uyên Hưng 5,<br />
+              Phường Tân Uyên, TP. Hồ Chí Minh
+            </p>
+
+            <p>
+              <strong>Điện thoại/Zalo:</strong><br />
+              0363579701 - Cô Trinh
+            </p>
+
+            <a
+              class="btn btn-primary full"
+              href="https://zalo.me/84363579701"
+              target="_blank"
+            >
+              Nhắn Zalo cho Cô Trinh
+            </a>
+          </div>
+
+          <div class="map-box">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.7028653107195!2d106.80563728605294!3d11.074358066747799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174c4909e82105f%3A0x674d35c72af391c1!2zM1JGNCtIN1gsIFTDom4gVXnDqm4sIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e1!3m2!1svi!2s!4v1779717692254!5m2!1svi!2s"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <a class="floating-zalo" href="https://zalo.me/84363579701" target="_blank">
+      <i class="fa-brands fa-facebook-messenger"></i>
+    </a>
+
+    <footer>
+      <p>© 2026 Nhóm trẻ Hoa Mặt Trời 🌻</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
